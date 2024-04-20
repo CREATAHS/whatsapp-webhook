@@ -9,7 +9,7 @@ const errorHandler = (err, req, res, next) => {
 
     if (err.name === 'CastError') {
         const message = `Resource not found with id ${err.value}`
-        error = new ErrorResponse(message, 404)
+        error = new ErrorResponse(message, 405)
     }
     //Mogoose duplicate key
     if (err.code === 11000) {

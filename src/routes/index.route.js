@@ -6,9 +6,9 @@ router.use('/api', serviceRoute);
 
 router.use('*', async (req, res, next) => {
     return res
-        .status(404)
+        .status(405)
         .json({
-            statusCode: 404
+            statusCode: 405
         });
 });
 
